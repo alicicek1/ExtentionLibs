@@ -8,13 +8,16 @@ public static bool IsNull(this string input)
     return string.IsNullOrWhiteSpace(input.Trim());
 }
 
+
 public static bool IsNotNullOrEmpty(this string input) => !string.IsNullOrEmpty(input);
+
 
 public static void ThrowIfNullEmptyOrWhiteSpace(this string input)
 {
     if (input.IsNullEmptyOrWhiteSpace())
         throw new ArgumentNullException(nameof(input));
 }
+
 
 public static IEnumerable<T> DistinctByIdWithoutYield<T, TKey>(this IEnumerable<T> source, Func<T, TKey> selector)
 {
@@ -29,6 +32,8 @@ public static IEnumerable<T> DistinctByIdWithoutYield<T, TKey>(this IEnumerable<
     }
     return ts;
 }
+
+
 public static IEnumerable<T> DistinctById<T, TKey>(this IEnumerable<T> source, Func<T, TKey> selector)
 {
     HashSet<TKey> keys = new HashSet<TKey>();
