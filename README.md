@@ -1,6 +1,6 @@
 # ExtentionLibs
 
-//D
+```c#
 public static bool IsNull(this string input)
 {
     if (input == null)
@@ -40,3 +40,4 @@ public static IEnumerable<T> DistinctById<T, TKey>(this IEnumerable<T> source, F
         }
     }
 } 
+```
